@@ -1,0 +1,81 @@
+@use '../abstracts/variables' as vars;
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 32px;
+    padding: 12px 32px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+
+    &:link,
+    &:visited {
+        text-decoration: none;
+    }
+}
+
+.btn.primary-btn,
+a.btn.primary-btn {
+    background-color: vars.$blue-color;
+    color: white;
+    
+    &:hover {
+        background-color: #1a2d4a;
+        transform: translateY(-2px);
+        color: white;
+    }
+    
+    &:visited {
+        color: white;
+    }
+    
+    &:active {
+        color: white;
+    }
+    
+    &:focus {
+        color: white;
+    }
+}
+
+.btn.secondary {
+    background-color: transparent;
+    color: vars.$blue-color;
+    border: 2px solid vars.$blue-color;
+    
+    &:hover {
+        background-color: vars.$blue-color;
+        color: white;
+    }
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 2rem;
+
+    .flecha-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: vars.$blue-color;
+        font-size: 12px;
+        font-weight: 400;
+        
+        img {
+            width: 24px;
+            height: 24px;
+        }
+        
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+

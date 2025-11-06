@@ -1,0 +1,55 @@
+
+@use '../abstracts/variables';
+
+body {
+  font-family: variables.$poppins-font, sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  color: variables.$blue-color;
+  font-weight: 600;
+  line-height: 80px;
+}
+
+h3 {
+  font-size: 18px;
+  color: variables.$blue-color;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+main .hero p {
+  color: variables.$grey-color;
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 400;
+  width: 685px;
+}
+
+.categories article p {
+  color: variables.$grey-color;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.categories article h2 {
+  color: variables.$blue-color;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.coments p {
+  color: variables.$black-color;
+  font-size: 12px;
+  line-height: 100%;
+  font-weight: 400;
+}
+
+.coments h3 {
+  color: variables.$blue-color;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 100%;
+}

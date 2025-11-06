@@ -1,0 +1,88 @@
+@use '../abstracts/variables' as vars;
+
+html * {
+    font-family: vars.$poppins-font, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    position: relative;
+    
+    // Imagen de fondo superior derecha (decorativa)
+    &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 400px;
+        height: 600px;
+        background: url('../img/fondo-lotus.png') no-repeat top right;
+        background-size: 400px 600px;
+        z-index: -3;
+        pointer-events: none;
+    }
+    
+    // Imagen de lotus central (decorativa)
+    &::after {
+        content: '';
+        position: fixed;
+        top: 270px;
+        right: 90px;
+        width: 400px;
+        height: 400px;
+        background: url('../img/lotus-img.svg') no-repeat center / contain;
+        opacity: 0.15;
+        filter: sepia(1) hue-rotate(140deg) saturate(0.8) brightness(1.1) contrast(0.9);
+        z-index: -2;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+}
+
+html {
+    position: relative;
+    
+    // Imagen principal del hero (mujer)
+    &::before {
+        content: '';
+        position: fixed;
+        bottom: 0;
+        right: -35px;
+        width: 1000px;
+        height: 850px;
+        background: url('../img/hero-img.png') no-repeat bottom right;
+        background-size: 1000px 850px;
+        z-index: -1;
+    }
+}
+
+.container {
+    max-width: 1800px;
+    margin-left: 80px;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    transition: all 0.3s ease;
+}
+
+// Estilos de hover para enlaces (excepto botones)
+a:not(.primary-btn):not([class*="dropdown"]):hover,
+.hero-content a:hover,
+.categories a:hover,
+.coments a:hover,
+main a:hover,
+section a:hover,
+article a:hover {
+    color: cyan;
+    transform: scale(1.2);
+    text-decoration: underline;
+}
